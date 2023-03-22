@@ -1,0 +1,35 @@
+@use '../global/' as global;
+
+
+.p-news-headline {
+
+}
+
+.p-news-headline__inner {
+  display: flex;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  transition: opacity .3s ease;
+
+  @include global.hv() {
+    opacity: 0.7;
+  }
+
+  @include global.mq('sp') {
+    display: block;
+  }
+}
+
+.p-news-headline__date {
+  display: block;
+  flex: 0 0 135px;
+  font-size: 16px;
+}
+
+.p-news-headline__ttl {
+  font-size: 16px;
+
+  @include global.mq('sp') {
+    margin-top: 5px;
+  }
+}

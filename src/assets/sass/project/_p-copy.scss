@@ -1,0 +1,26 @@
+@use '../global/' as global;
+
+
+.p-copy {
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+.p-copy__inner {
+  width: 100%;
+  max-width: calc(global.$layout-width-footer + global.$layout-padding-side-pc * 2);
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: global.$layout-padding-side-pc;
+  padding-left: global.$layout-padding-side-pc;
+  text-align: right;
+
+  @include global.mq('sp') {
+    text-align: center;
+  }
+}
+
+.p-copy__txt {
+  font-weight: global.$font-weight-bold;
+  font-size: 12px;
+}

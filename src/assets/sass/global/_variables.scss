@@ -1,0 +1,72 @@
+// ============================================================
+// Color
+// ============================================================
+// ----- Site Color -----
+$color-main: #1B224C;
+$color-accent: #F5A623;
+
+// ----- Back Ground Color -----
+$color-bg-base: #FFFFFF;
+
+// ----- Text Color -----
+$color-txt-base: #1B224C;
+
+
+// ============================================================
+// Font
+// ============================================================
+// ----- Font Family -----
+$font-base: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+
+// ----- Font Size -----
+$font-size-base: 16px;
+
+// ----- Font Weight -----
+$font-weight-base: 500;
+$font-weight-bold: 700;
+
+// ----- Font Line Height -----
+$line-height-base: calc(27 / 16);
+
+
+// ============================================================
+// BreakPoint
+// ============================================================
+$break-point-lg: 992px;
+$break-point-md: 768px;
+
+// ============================================================
+// Layout
+// ============================================================
+// ----- Container -----
+$layout-width-header: 1880px;
+$layout-width-container: 900px;
+$layout-width-footer: 936px;
+
+// ----- Width -----
+$layout-width-inner-pc: 1180px;
+$layout-width-inner-sp: 768px;
+
+// ----- Height -----
+$layout-height-header-pc: 80px;
+$layout-height-header-tab: 60px;
+
+// ----- Padding -----
+$layout-padding-side-pc: 20px;
+$layout-padding-side-sp: 16px;
+
+// ============================================================
+// Layer
+// ============================================================
+// ----- Layer -----
+$layer: (
+  hamburger: 300,
+  drawer: 200,
+  header: 100,
+  default: 1,
+);
+
+// ============================================================
+// Utility
+// ============================================================
+$hover-opacity: 0.7;

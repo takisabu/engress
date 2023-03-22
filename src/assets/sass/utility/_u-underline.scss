@@ -1,0 +1,13 @@
+@use '../global/' as global;
+
+
+.u-underline {
+  text-decoration-line: underline;
+
+  &.u-underline--primary {
+    text-decoration-color: #F5A623;
+    text-decoration-thickness: 9px;
+    text-underline-offset: -5px;
+    text-decoration-skip-ink: none;
+  }
+}

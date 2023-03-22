@@ -1,0 +1,73 @@
+@use '../global/' as global;
+
+
+.p-qa {
+  position: relative;
+}
+
+.p-qa__btn {
+  position: absolute;
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+  top: 26px;
+  right: 20px;
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    background-color: #1B224C;
+    transition: transform .3s ease;
+  }
+
+  &::before {
+    width: 100%;
+    height: 3px;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+
+  &::after {
+    width: 3px;
+    height: 100%;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .is-opened & {
+    &::after {
+      transform: translateX(-50%) rotate(90deg);
+    }
+  }
+}
+
+.p-qa__q {
+  padding-top: 23px;
+  padding-right: 60px;
+  padding-bottom: 16px;
+  cursor: pointer;
+}
+
+.p-qa__a {
+  margin-bottom: 9px;
+  background-color: transparent;
+  height: 0;
+  line-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition-duration: .3s;
+  padding-right: 25px;
+  padding-left: 25px;
+
+  .is-opened & {
+    padding-top: 17px;
+    padding-bottom: 20px;
+    background-color: #F8F8F8;
+    height: auto;
+    line-height: global.$line-height-base;
+    opacity: 1;
+  }
+}

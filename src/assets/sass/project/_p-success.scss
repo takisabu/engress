@@ -1,0 +1,62 @@
+@use '../global/' as global;
+
+
+.p-success {
+
+}
+
+.p-success__ttl {
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: global.$font-weight-bold;
+  line-height: calc(29 / 16);
+}
+
+.p-success__img {
+  background-color: #FFFFFF;
+  margin-top: 6px;
+  width: 100%;
+  height: 170px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+
+  img {
+    width: 140px;
+    height: 140px;
+    object-fit: contain;
+  }
+}
+
+.p-success__body {
+  margin-top: 16px;
+}
+
+.p-success__row {
+  display: flex;
+
+  & + & {
+    margin-top: 10px;
+  }
+}
+
+.p-success__info {
+  background-color: #FFFFFF;
+  padding-top: 3px;
+  padding-right: 10px;
+  padding-bottom: 3px;
+  padding-left: 10px;
+
+  & + & {
+    margin-left: 8px;
+  }
+
+  &.p-success__info--100 {
+    flex: 0 0 100px;
+  }
+
+  &.p-success__info--full {
+    flex: 1 1 auto;
+  }
+}

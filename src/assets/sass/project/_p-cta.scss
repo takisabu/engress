@@ -1,0 +1,47 @@
+@use '../global/' as global;
+
+
+.p-cta {
+  background-image: url("../img/cta.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 60px;
+  padding-bottom: 38px;
+}
+
+.p-cta__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.p-cta__ttl {
+  text-align: center;
+  font-weight: global.$font-weight-bold;
+  font-size: 32px;
+  color: #FFFFFF;
+
+  @include global.mq('sp') {
+    font-size: 24px;
+  }
+}
+
+.p-cta__btn-wrapper {
+  width: 280px;
+  margin-top: 15px;
+}
+
+.p-cta__btn {
+  border-radius: 25px;
+}
+
+.p-cta__contact {
+  color: #FFFFFF;
+  margin-top: 18px;
+  transition: opacity .3s ease;
+
+  @include global.hv() {
+    opacity: 0.7;
+  }
+}

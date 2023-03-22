@@ -1,0 +1,15 @@
+@use '../global/' as global;
+
+
+.p-thanks {
+
+}
+
+.p-thanks__txt {
+  line-height: calc(27 / 16);
+  text-align: center;
+
+  & + & {
+    margin-top: 80px;
+  }
+}

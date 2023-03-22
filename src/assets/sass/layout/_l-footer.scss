@@ -1,0 +1,15 @@
+@use '../global/' as global;
+
+
+.l-footer {
+
+}
+
+.l-footer__container {
+  width: 100%;
+  max-width: calc(global.$layout-width-footer + global.$layout-padding-side-pc * 2);
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: global.$layout-padding-side-pc;
+  padding-left: global.$layout-padding-side-pc;
+}

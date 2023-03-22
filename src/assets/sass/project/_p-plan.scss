@@ -1,0 +1,64 @@
+@use '../global/' as global;
+
+
+.p-plan {
+
+}
+
+.p-plan__formula {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include global.mq('sp') {
+    flex-direction: column;
+  }
+}
+
+.p-plan__formula-item {
+  width: 280px;
+  padding-top: 26px;
+  padding-bottom: 26px;
+  text-align: center;
+  font-size: 22px;
+  font-weight: global.$font-weight-bold;
+  color: #FFFFFF;
+  background-color: global.$color-main;
+}
+
+.p-plan__formula-plus {
+  position: relative;
+  width: 28px;
+  height: 28px;
+  margin-top: 20px;
+  margin-right: 35px;
+  margin-bottom: 20px;
+  margin-left: 35px;
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    background-color: global.$color-main;
+  }
+
+  &::before {
+    height: 2px;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+
+  &::after {
+    height: 100%;
+    width: 2px;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.p-plan__txt {
+  margin-top: 40px;
+}

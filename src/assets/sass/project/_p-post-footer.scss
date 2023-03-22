@@ -1,0 +1,15 @@
+@use '../global/' as global;
+
+
+.p-post-footer {
+  margin-top: 57px;
+}
+
+.p-post-footer__ttl {
+  font-size: 26px;
+  font-weight: global.$font-weight-bold;
+}
+
+.p-post-footer__body {
+  margin-top: 25px;
+}

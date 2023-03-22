@@ -1,0 +1,50 @@
+@use '../global/' as global;
+
+
+.c-btn {
+  display: inline-block;
+  width: 100%;
+  cursor: pointer;
+  text-align: center;
+  padding-top: 10px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+
+  &.c-btn--primary,
+  &.c-btn--secondary {
+    color: #FFFFFF;
+    font-weight: global.$font-weight-bold;
+    transition: opacity .3s ease;
+
+    @include global.hv() {
+      opacity: global.$hover-opacity;
+    }
+  }
+
+  &.c-btn--primary {
+    background-color: global.$color-accent;
+  }
+
+  &.c-btn--secondary {
+    background-color: global.$color-main;
+
+    @include global.mq('tab') {
+      // background-color: #FFFFFF;
+      // color: global.$color-main;
+      border: 1px solid #FFFFFF;
+    }
+  }
+
+  &.c-btn--ghost {
+    color: #FFFFFF;
+    background-color: transparent;
+    border: 1px solid #FFFFFF;
+    transition: color .3s ease, background-color .3s ease;
+
+    @include global.hv() {
+      color: global.$color-txt-base;
+      background-color: #FFFFFF;
+    }
+  }
+}

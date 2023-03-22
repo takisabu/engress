@@ -1,0 +1,60 @@
+@use '../global/' as global;
+
+
+.p-fv {
+  height: 476px;
+  background-image: url("../img/fv.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include global.mq('sp') {
+    height: 550px;
+  }
+}
+
+.p-fv__content {
+  text-align: center;
+  padding-top: 100px;
+}
+
+.p-fv__ttl {
+  display: inline-block;
+  font-size: 48px;
+  font-weight: global.$font-weight-bold;
+  color: #FFFFFF;
+  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+
+  @include global.mq('sp') {
+    text-align: center;
+  }
+}
+
+.p-fv__lead {
+  font-size: 18px;
+  color: #FFFFFF;
+  margin-top: 5px;
+}
+
+.p-fv__download {
+  width: 260px;
+  margin-top: 45px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.p-fv__btn {
+  padding-top: 17px;
+  padding-bottom: 17px;
+  border-radius: 30px;
+}
+
+.p-fv__contact {
+  color: #FFFFFF;
+  margin-top: 15px;
+  transition: opacity .3s ease;
+
+  @include global.hv() {
+    opacity: global.$hover-opacity;
+  }
+}

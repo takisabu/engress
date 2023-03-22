@@ -1,0 +1,17 @@
+@use '../global/' as global;
+
+
+.l-related {
+}
+
+.l-related__item {
+  margin-bottom: 28px;
+
+  .l-related--sm & {
+    margin-bottom: 40px;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

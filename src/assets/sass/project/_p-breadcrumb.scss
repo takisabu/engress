@@ -1,0 +1,26 @@
+@use '../global/' as global;
+
+
+.p-breadcrumb {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: #F8F8F8;
+}
+
+.p-breadcrumb__inner {
+  > span {
+    font-size: 12px;
+  }
+
+  > span:not(:last-child) {
+    text-decoration: underline;
+  }
+
+  a {
+    transition: opacity .3s ease;
+
+    @include global.hv() {
+      opacity: 0.7;
+    }
+  }
+}

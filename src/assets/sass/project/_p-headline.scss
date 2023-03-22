@@ -1,0 +1,25 @@
+@use '../global/' as global;
+
+
+.p-headline {
+
+}
+
+.p-headline__inner {
+  display: inline-block;
+  transition: opacity .3s ease;
+
+  @include global.hv() {
+    opacity: 0.7;
+  }
+}
+
+.p-headline__date {
+  font-size: 12px;
+  line-height: 1;
+}
+
+.p-headline__ttl {
+  font-size: 16px;
+  margin-top: 3px;
+}

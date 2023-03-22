@@ -1,0 +1,16 @@
+@use '../global/' as global;
+
+
+.l-features {
+
+}
+
+.l-features__item {
+  & + & {
+    margin-top: 55px;
+
+    @include global.mq('sp') {
+      margin-top: 0;
+    }
+  }
+}

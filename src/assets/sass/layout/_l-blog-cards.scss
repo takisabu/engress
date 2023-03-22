@@ -1,0 +1,12 @@
+@use '../global/' as global;
+
+
+.l-blog-cards {
+
+}
+
+.l-blog-cards__item {
+  & + & {
+    margin-top: 30px;
+  }
+}

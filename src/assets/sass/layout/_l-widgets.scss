@@ -1,0 +1,12 @@
+@use '../global/' as global;
+
+
+.l-widgets {
+
+}
+
+.l-widgets__item {
+  & + & {
+    margin-top: 50px;
+  }
+}

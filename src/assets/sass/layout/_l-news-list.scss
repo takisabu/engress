@@ -1,0 +1,17 @@
+@use '../global/' as global;
+
+
+.l-news-list {
+}
+
+.l-news-list__body {
+  border-top: 1px solid #D5D5D5;
+}
+
+.l-news-list__item {
+  border-bottom: 1px solid #D5D5D5;
+}
+
+.l-news-list__pagination  {
+  margin-top: 73px;
+}

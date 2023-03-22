@@ -1,0 +1,13 @@
+@use '../global/' as global;
+
+
+.l-plan-cards {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: global.$layout-width-container;
+}
+
+.l-plan-cards__item {
+  width: 220px;
+}

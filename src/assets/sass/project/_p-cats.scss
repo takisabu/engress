@@ -1,0 +1,26 @@
+@use '../global/' as global;
+
+
+.p-cats {
+
+}
+
+.p-cats__item {
+  & + & {
+    margin-top: 4px;
+  }
+}
+
+.p-cats__link {
+  display: inline-block;
+  font-weight: global.$font-weight-bold;
+  transition: opacity .3s ease;
+
+  &::before {
+    content: "・";
+  }
+
+  @include global.hv() {
+    opacity: 0.7;
+  }
+}

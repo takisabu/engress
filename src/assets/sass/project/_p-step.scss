@@ -1,0 +1,81 @@
+@use '../global/' as global;
+
+
+.p-step {
+  display: flex;
+  height: 64px;
+
+  @include global.mq('sp') {
+    height: auto;
+  }
+}
+
+.p-step__num {
+  width: 64px;
+  color: #FFFFFF;
+  background-color: global.$color-accent;
+  font-weight: global.$font-weight-bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include global.mq('sp') {
+    width: 50px;
+  }
+}
+
+.p-step__body {
+  display: flex;
+  width: calc(100% - 64px);
+  align-items: center;
+  background-color: #F8F8F8;
+
+  @include global.mq('sp') {
+    flex-direction: column;
+    width: calc(100% - 50px);
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+
+.p-step__ttl {
+  position: relative;
+  font-size: 18px;
+  font-weight: global.$font-weight-bold;
+  padding-left: 20px;
+  width: 215px;
+
+  @include global.mq('sp') {
+    width: 100%;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 30px;
+    background-color: #C3C3C3;
+
+    @include global.mq('sp') {
+      display: none;
+    }
+  }
+}
+
+.p-step__txt {
+  width: calc(100% - 215px);
+  padding-left: 53px;
+  padding-right: 10px;
+
+  @include global.mq('tab') {
+    padding-left: 40px;
+  }
+
+  @include global.mq('sp') {
+    width: 100%;
+    padding-left: 20px;
+  }
+}

@@ -1,0 +1,12 @@
+@use '../global/' as global;
+
+
+.l-headlines {
+
+}
+
+.l-headlines__item {
+  & + & {
+    margin-top: 47px;
+  }
+}

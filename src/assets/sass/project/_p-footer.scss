@@ -1,0 +1,151 @@
+@use '../global/' as global;
+
+
+.p-footer {
+  background-color: global.$color-main;
+  padding-top: 35px;
+  padding-bottom: 65px;
+
+  @include global.mq('sp') {
+    padding-bottom: 40px;
+  }
+}
+
+.p-footer__inner {
+  display: flex;
+  justify-content: space-between;
+
+  @include global.mq('sp') {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.p-footer__left {
+  margin-left: 24px;
+
+  @include global.mq('sp') {
+    max-width: 350px;
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+.p-footer__nav {
+  margin-top: 8px;
+}
+
+.p-footer__nav-list {
+  display: flex;
+  margin-right: -47px;
+
+  @include global.mq('sp') {
+    margin-right: 0;
+    flex-wrap: wrap;
+    margin-bottom: -10px;
+  }
+
+  > li {
+    position: relative;
+    margin-right: 47px;
+
+    @include global.mq('sp') {
+      width: 50%;
+      margin-right: 0;
+      margin-bottom: 10px;
+      text-align: center;
+
+      &:nth-child(2n + 1) {
+        &::before {
+          display: none;
+        }
+      }
+    }
+
+    &:not(:first-child) {
+      &::before {
+        position: absolute;
+        content: "";
+        width: 1px;
+        height: 90%;
+        background-color: #FFFFFF;
+        top: 50%;
+        left: -26px;
+        transform: translateY(-50%);
+
+        @include global.mq('sp') {
+          left: 0;
+        }
+      }
+    }
+
+    > a {
+      color: #FFFFFF;
+      font-weight: global.$font-weight-bold;
+      transition: opacity .3s ease;
+
+      @include global.hv() {
+        opacity: 0.7;
+      }
+    }
+  }
+}
+
+.p-footer__right {
+  @include global.mq('sp') {
+    margin-top: 40px;
+  }
+}
+
+.p-footer__logo {
+  background-color: #FFFFFF;
+  padding-top: 14px;
+  padding-right: 19px;
+  padding-bottom: 14px;
+  padding-left: 19px;
+
+  img {
+    width: 159px;
+  }
+}
+
+.p-footer__phone {
+  color: #FFFFFF;
+  text-align: right;
+  font-weight: global.$font-weight-bold;
+  margin-top: 20px;
+
+  @include global.mq('sp') {
+    text-align: center;
+  }
+}
+
+.p-footer__phone-inner {
+  position: relative;
+  padding-left: 17px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 15px;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    background-image: url("../img/icon-phone-sub.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+.p-footer__hour {
+  color: #FFFFFF;
+  text-align: right;
+  font-size: 12px;
+  margin-top: 3px;
+
+  @include global.mq('sp') {
+    text-align: center;
+  }
+}

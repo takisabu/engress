@@ -1,0 +1,20 @@
+@use '../global/' as global;
+
+
+.l-post {
+  margin-top: 60px;
+  margin-bottom: 100px;
+
+  &.l-post--news {
+    margin-top: 50px;
+    margin-bottom: 60px;
+  }
+}
+
+.l-post-main {
+
+}
+
+.l-post-side {
+
+}

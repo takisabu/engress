@@ -1,0 +1,24 @@
+@use '../global/' as global;
+
+
+.l-header {
+  position: fixed;
+  z-index: global.get-layer-index("header");
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: global.$layout-height-header-pc;
+
+  @include global.mq('tab') {
+    height: global.$layout-height-header-tab;
+  }
+}
+
+.l-header__container {
+  width: 100%;
+  max-width: 1280px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 10px;
+  padding-left: 10px;
+}

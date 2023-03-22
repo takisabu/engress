@@ -1,0 +1,56 @@
+@use '../global/' as global;
+
+
+.p-pagination {
+
+  .nav-links {
+    display: flex;
+    justify-content: center;
+    margin-right: -20px;
+
+    @include global.mq('sp') {
+      margin-right: -10px;
+    }
+
+
+    > .page-numbers {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50px;
+      height: 50px;
+      border: 1px solid global.$color-main;
+      margin-right: 20px;
+      font-weight: global.$font-weight-bold;
+
+      @include global.mq('sp') {
+        margin-right: 10px;
+        width: 30px;
+        height: 30px;
+      }
+
+      &.current {
+        background-color: global.$color-main;
+        color: #FFFFFF;
+      }
+
+      &.dots {
+        border: none;
+        width: 50px;
+
+        @include global.mq('sp') {
+          width: 20px;
+        }
+      }
+    }
+
+    > a {
+      transition: background-color .3s ease, color .3s ease;
+
+      @include global.hv() {
+        background-color: global.$color-main;
+        color: #FFFFFF;
+      }
+    }
+  }
+}

@@ -1,0 +1,102 @@
+@use '../global/' as global;
+
+
+.p-related {
+  word-break: break-all;
+}
+
+.p-related__inner {
+  display: flex;
+  flex-direction: row-reverse;
+
+  @include global.hv() {
+    .p-related__body {
+      opacity: 0.7;
+    }
+
+    .p-related__thumb {
+      img {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+
+.p-related__body {
+  flex: 1;
+  transition: opacity .3s ease;
+}
+
+.p-related__date {
+  display: block;
+  line-height: 1;
+  margin-bottom: 25px;
+
+  @include global.mq('sp') {
+    margin-bottom: 5px;
+    font-size: 12px;
+  }
+}
+
+.p-related__ttl {
+  font-size: 18px;
+  font-weight: global.$font-weight-bold;
+  line-height: calc(27 / 18);
+
+  .p-related--sm & {
+    font-size: 12px;
+    font-weight: global.$font-weight-base;
+    line-height: 2;
+    margin-top: -5px;
+  }
+
+  @include global.mq('sp') {
+    font-size: 12px;
+    font-weight: global.$font-weight-base;
+    line-height: 2;
+    margin-top: -5px;
+  }
+}
+
+.p-related__thumb {
+  position: relative;
+  flex: 0 0 calc(210 / 590 * 100%);
+  margin-right: 32px;
+  overflow: hidden;
+  min-height: 128px;
+
+  .p-related--sm & {
+    flex: 0 0 calc(100 / 270 * 100%);
+    min-height: 70px;
+    margin-right: 18px;
+  }
+
+  @include global.mq('sp') {
+    flex: 0 0 calc(100 / 270 * 100%);
+    min-height: 70px;
+    margin-right: 18px;
+    aspect-ratio: 16 / 9;
+  }
+
+  img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .3s ease;
+  }
+}
+
+.p-related__cat {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #FFFFFF;
+  background-color: global.$color-main;
+  font-size: 12px;
+  padding-top: 4px;
+  padding-right: 12px;
+  padding-bottom: 4px;
+  padding-left: 12px;
+}

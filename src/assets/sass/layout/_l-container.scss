@@ -1,0 +1,28 @@
+@use '../global/' as global;
+
+
+.l-container {
+  width: 100%;
+  max-width: calc(global.$layout-width-container + global.$layout-padding-side-pc * 2);
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: global.$layout-padding-side-pc;
+  padding-left: global.$layout-padding-side-pc;
+
+  @include global.mq('sp') {
+    padding-right: global.$layout-padding-side-sp;
+    padding-left: global.$layout-padding-side-sp;
+  }
+
+  &.l-container--sp-full {
+    @include global.mq('sp') {
+      max-width: 100%;
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+
+  &.l-container--narrow {
+    max-width: calc(700px + global.$layout-padding-side-pc * 2);
+  }
+}

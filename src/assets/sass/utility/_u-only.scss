@@ -1,0 +1,8 @@
+@use '../global/' as global;
+
+
+.u-only-sp {
+  @include global.mq('sp-over') {
+    display: none;
+  }
+}

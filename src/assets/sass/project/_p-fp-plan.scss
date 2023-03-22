@@ -1,0 +1,42 @@
+@use '../global/' as global;
+
+
+.p-fp-plan {
+  margin-top: 90px;
+  margin-bottom: 40px;
+  padding-top: 52px;
+  padding-bottom: 54px;
+  background-image: url("../img/price.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include global.mq('sp') {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-right: global.$layout-padding-side-sp;
+    padding-left: global.$layout-padding-side-sp;
+  }
+}
+
+.p-fp-plan__ttl {
+  font-size: 26px;
+  font-weight: global.$font-weight-bold;
+  text-align: center;
+  color: #FFFFFF;
+
+  @include global.mq('sp') {
+    font-size: 24px;
+  }
+}
+
+.p-fp-plan__btn-wrapper {
+  width: 200px;
+  margin-top: 18px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.p-fp-plan__btn {
+  border-radius: 30px;
+}

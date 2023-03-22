@@ -1,0 +1,78 @@
+@use '../global/' as global;
+
+
+.p-main-msg {
+  background-color: global.$color-main;
+  padding-top: 53px;
+  padding-bottom: 54px;
+}
+
+.p-main-msg__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.p-main-msg__ttl {
+  color: #FFFFFF;
+  font-size: 36px;
+  font-weight: global.$font-weight-bold;
+
+  @include global.mq('sp') {
+    font-size: 24px;
+    text-align: center;
+  }
+}
+
+.p-main-msg__list {
+  display: flex;
+  margin-top: 38px;
+
+  @include global.mq('sp') {
+    flex-direction: column;
+  }
+}
+
+.p-main-msg__item {
+  color: #FFFFFF;
+  font-size: 18px;
+  font-weight: global.$font-weight-bold;
+  line-height: calc(39 / 18);
+  text-align: center;
+  
+  @include global.mq('sp') {
+    font-size: 16px;
+    border: 1px dotted #FFFFFF;
+    padding-top: 10px;
+    padding-right: 30px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+
+    & + & {
+      margin-top: 20px;
+    }
+  }
+
+  &:nth-child(2) {
+    margin-left: 57px;
+
+    @include global.mq('sp') {
+      margin-left: 0;
+    }
+  }
+
+  &:nth-child(3) {
+    margin-right: 27px;
+    margin-left: 30px;
+
+    @include global.mq('sp') {
+      margin-right: 0;
+      margin-left: 0;
+    }
+  }
+}
+
+.p-main-msg__board {
+  margin-top: 72px;
+  width: 100%;
+}

@@ -1,0 +1,58 @@
+@use '../global/' as global;
+
+
+.p-g-nav {
+
+}
+
+.p-g-nav__list {
+  display: flex;
+  align-items: center;
+
+  @include global.mq('tab') {
+    flex-direction: column;
+  }
+
+  > li {
+    position: relative;
+
+    &:not(:first-child) {
+      margin-left: 28px;
+
+      @include global.mq('tab') {
+        margin-top: 20px;
+        margin-left: 0;
+      }
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 0;
+      height: 1px;
+      left: 50%;
+      bottom: 1px;
+      transform: translateX(-50%);
+      background-color: global.$color-main;
+      transition: width .3s ease;
+    }
+
+    @include global.hv() {
+      &::after {
+        width: 100%;
+      }
+    }
+
+    > a {
+      padding-top: 5px;
+      padding-bottom: 5px;
+      font-weight: global.$font-weight-bold;
+
+      @include global.mq('tab') {
+        color: #FFFFFF;
+        font-size: 18px;
+        font-weight: global.$font-weight-bold;
+      }
+    }
+  }
+}

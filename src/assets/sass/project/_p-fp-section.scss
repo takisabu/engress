@@ -1,0 +1,92 @@
+@use '../global/' as global;
+
+
+.p-fp-section {
+  &.p-fp-section--strength {
+    padding-top: 48px;
+  }
+
+  &.p-fp-section--success {
+    background-color: global.$color-main;
+    padding-top: 46px;
+    padding-bottom: 60px;
+
+    @include global.mq('sp') {
+      padding-top: 60px;
+    }
+  }
+
+  &.p-fp-section--flow {
+    padding-top: 47px;
+  }
+
+  &.p-fp-section--faq {
+    padding-top: 64px;
+  }
+}
+
+.p-fp-section__inner {
+
+}
+
+.p-fp-section__ttl {
+  font-size: 36px;
+  font-weight: global.$font-weight-bold;
+  text-align: center;
+
+  @include global.mq('sp') {
+    font-size: 24px;
+  }
+
+  .p-fp-section--success & {
+    color: #FFFFFF;
+  }
+
+  .p-fp-section--blog & {
+    text-align: left;
+    font-size: 32px;
+
+    @include global.mq('sp') {
+      text-align: center;
+    }
+  }
+
+  .p-fp-section--news & {
+    text-align: left;
+    font-size: 32px;
+
+    @include global.mq('sp') {
+      text-align: center;
+    }
+  }
+}
+
+.p-fp-section__content {
+  .p-fp-section--strength & {
+    margin-top: 43px;
+  }
+
+  .p-fp-section--success & {
+    margin-top: 115px;
+
+    @include global.mq('sp') {
+      margin-top: 40px;
+    }
+  }
+
+  .p-fp-section--flow & {
+    margin-top: 36px;
+  }
+
+  .p-fp-section--faq & {
+    margin-top: 16px;
+  }
+
+  .p-fp-section--blog & {
+    margin-top: 25px;
+  }
+
+  .p-fp-section--news & {
+    margin-top: 17px;
+  }
+}

@@ -1,0 +1,30 @@
+@use '../global/' as global;
+
+
+.l-fp-post {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 80px;
+  margin-bottom: 120px;
+
+  @include global.mq('sp') {
+    display: block;
+  }
+}
+
+.l-fp-post__left {
+  width: 430px;
+
+  @include global.mq('sp') {
+    width: 100%;
+  }
+}
+
+.l-fp-post__right {
+  width: calc(100% - 497px);
+
+  @include global.mq('sp') {
+    width: 100%;
+    margin-top: 80px;
+  }
+}

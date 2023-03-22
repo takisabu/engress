@@ -1,0 +1,24 @@
+@use '../global/' as global;
+
+
+.l-blog-cards-type2 {
+
+}
+
+.l-blog-cards-type2__content {
+
+}
+
+.l-blog-cards-type2__item {
+  &:first-child {
+    margin-bottom: 93px;
+  }
+
+  & + & {
+    margin-top: 57px;
+  }
+}
+
+.l-blog-cards-type2__pagination {
+  margin-top: 110px;
+}

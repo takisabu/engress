@@ -1,0 +1,37 @@
+@use '../global/' as global;
+
+
+.l-contents {
+  margin-top: global.$layout-height-header-pc;
+
+  @include global.mq('tab') {
+    margin-top: global.$layout-height-header-tab;
+  }
+}
+
+.l-contents__col {
+  display: flex;
+
+  @include global.mq('sp') {
+    display: block;
+  }
+}
+
+.l-contents__left {
+  flex: 1;
+  margin-right: 35px;
+
+  @include global.mq('sp') {
+    margin-right: 0;
+  }
+}
+
+.l-contents__right {
+  flex: 0 0 270px;
+  margin-right: 5px;
+
+  @include global.mq('sp') {
+    margin-top: 50px;
+    margin-right: 0;
+  }
+}
